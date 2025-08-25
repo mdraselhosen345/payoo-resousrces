@@ -1,35 +1,13 @@
 const validpin = 1234
-
-// function to get input values
-
-// function getInputValueNumber(id){
-//    const inputField =  document.getElementById(id)
-//    const inputFieldValue = inputField.value
-//    const inputFieldValueNumber = parseInt(inputFieldValue)
-//    console.log(inputFieldValueNumber)
-//  }
-
-
-//  function getInputValue(id){
-//      const inputField = document.getElementById(id)
-//      const inputFieldValue = inputField.value
-//      return inputFieldValue 
-//  }
-// function to get innertext 
-// function getInnerText(id){
-//      const element =document.getElementById(id)
-//      const elementValue = element.innerText
-//      const elementValueNumber = parseInt(elementValue)
-//      return elementValueNumber
+// function to toggle ---------
+// function handleToggle(id){
+//      const forms = document.getElementsByClassName("form")
+//      for(const form of forms){
+//           form.style.display = "none"
+//           document.getElementById("get-bouns-parent").style.display = "block"
+//      }
 // }
- 
-// function to set innerText
-// function setInnerText(value){
-//      const availableBalanceElement = getElementById("available-balnce")
-//       availableBalanceElement.innerText = value
 
-
-// }
 
 //Add money featrure------
 document.getElementById("add-money-btn")
@@ -41,8 +19,7 @@ document.getElementById("add-money-btn")
      const addAmount = parseInt(document.getElementById("add-amount").value);
      const pinNumber = parseInt(document.getElementById("pin-number").value)
      
-      const availableBalnce = parseInt(document.getElementById("available-balnce").innerText)
-     // const availableBalnce = getInnerText("available-balnce")
+     const availableBalnce = parseInt(document.getElementById("available-balnce").innerText)
      
      console.log(addAmount, availableBalnce)
      
@@ -57,9 +34,7 @@ document.getElementById("add-money-btn")
 
      const totalNewAvailableBalance = addAmount + availableBalnce
 
-      document.getElementById("available-balnce").innerText = totalNewAvailableBalance
-
-     // setInnerText(totalNewAvailableBalance)
+     document.getElementById("available-balnce").innerText = totalNewAvailableBalance
 })
 
 
@@ -73,22 +48,60 @@ document.getElementById("add-money-btn")
     console.log(withdrawAmount, availableBalance)
     const totalNewAvailableBalance = availableBalance - withdrawAmount
     console.log(totalNewAvailableBalance)
-     document.getElementById("available-balnce").innerText = totalNewAvailableBalance 
-
-//     setInnerText(totalNewAvailableBalance)
+    document.getElementById("available-balnce").innerText = totalNewAvailableBalance 
 })
+
+// transfer money ---------------------
+    
 
 //toggling feature----------------
 document.getElementById("add-money-button")
-.addEventListener("click", function(e){
-     
-     document.getElementById("add-money-parent").style.display = "block"
-     document.getElementById("cash-out-parent").style.display = "none"
+.addEventListener("click", function(){
+     // document.getElementById("cash-out-parent").style.display = "none"
+     // document.getElementById("add-money-parent").style.display = "block"
+     // document.getElementById("transfer-money-parent").style.display ="none"
+
+     const forms = document.getElementsByClassName("form")
+     for(const form of forms){
+          form.style.display = "none"
+          document.getElementById("add-money-parent").style.display = "block"
+     }
 })
 
 document.getElementById("cash-out-button")
 .addEventListener("click", function(){
-     
-     document.getElementById("cash-out-parent").style.display ="block"
-     document.getElementById("add-money-parent").style.display ="none"
+     // document.getElementById("cash-out-parent").style.display ="block"
+     //  document.getElementById("add-money-parent").style.display ="none"
+     //  document.getElementById("transfer-money-parent").style.display ="none"
+     const forms = document.getElementsByClassName("form")
+     for(const form of forms){
+          form.style.display = "none"
+          document.getElementById("cash-out-parent").style.display = "block"
+     }
+})
+
+
+document.getElementById("transfer-button")
+.addEventListener("click", function(){
+     // document.getElementById("cash-out-parent").style.display = "none"
+     // document.getElementById("add-money-parent").style.display = "none" 
+     // document.getElementById("transfer-money-parent").style.display ="block"
+      const forms = document.getElementsByClassName("form")
+     for(const form of forms){
+          form.style.display = "none"
+          document.getElementById("transfer-money-parent").style.display = "block"
+     }
+})
+
+
+document.getElementById("bouns-button")
+.addEventListener("click", function(){
+     // document.getElementById("cash-out-parent").style.display = "none"
+     // document.getElementById("add-money-parent").style.display = "none" 
+     // document.getElementById("transfer-money-parent").style.display ="block"
+      const forms = document.getElementsByClassName("form")
+     for(const form of forms){
+          form.style.display = "none"
+          document.getElementById("get-bouns-parent").style.display = "block"
+     }
 })
