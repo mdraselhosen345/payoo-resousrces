@@ -8,9 +8,9 @@ const validpin = 1234
 //      }
 // }
 
-
-//Add money featrure------
-document.getElementById("add-money-btn")
+// welcome to pay button click--------------------
+//Add money ------
+ document.getElementById("add-money-btn")
 .addEventListener("click", function(e){
      e.preventDefault()
      console.log("Add money btn clcicked");
@@ -38,7 +38,7 @@ document.getElementById("add-money-btn")
 })
 
 
-//cash out money fiscure----
+//cash out money ----
  document.getElementById("Withdraw-btn")
  .addEventListener("click", function(e){
      e.preventDefault()
@@ -50,11 +50,15 @@ document.getElementById("add-money-btn")
     console.log(totalNewAvailableBalance)
     document.getElementById("available-balnce").innerText = totalNewAvailableBalance 
 })
+// get Bonus------
+
 
 // transfer money ---------------------
     
 
 //toggling feature----------------
+
+// add money toggling ------
 document.getElementById("add-money-button")
 .addEventListener("click", function(){
      // document.getElementById("cash-out-parent").style.display = "none"
@@ -68,6 +72,7 @@ document.getElementById("add-money-button")
      }
 })
 
+// cash out toggling ------
 document.getElementById("cash-out-button")
 .addEventListener("click", function(){
      // document.getElementById("cash-out-parent").style.display ="block"
@@ -80,7 +85,7 @@ document.getElementById("cash-out-button")
      }
 })
 
-
+// transfer money toggling ------
 document.getElementById("transfer-button")
 .addEventListener("click", function(){
      // document.getElementById("cash-out-parent").style.display = "none"
@@ -93,7 +98,7 @@ document.getElementById("transfer-button")
      }
 })
 
-
+// get Bouns toggling ------
 document.getElementById("bouns-button")
 .addEventListener("click", function(){
      // document.getElementById("cash-out-parent").style.display = "none"
