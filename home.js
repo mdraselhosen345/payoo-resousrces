@@ -110,3 +110,27 @@ document.getElementById("bouns-button")
           document.getElementById("get-bouns-parent").style.display = "block"
      }
 })
+// pay Bill-------------
+document.getElementById("pay-bill-button")
+.addEventListener("click", function(){
+     // document.getElementById("cash-out-parent").style.display = "none"
+     // document.getElementById("add-money-parent").style.display = "none" 
+     // document.getElementById("transfer-money-parent").style.display ="block"
+      const forms = document.getElementsByClassName("form")
+     for(const form of forms){
+          form.style.display = "none"
+          document.getElementById("pay-bill-parent").style.display = "block"
+     }
+})
+// Transaction History-------------
+document.getElementById("Transaction-button")
+.addEventListener("click", function(){
+     // document.getElementById("cash-out-parent").style.display = "none"
+     // document.getElementById("add-money-parent").style.display = "none" 
+     // document.getElementById("transfer-money-parent").style.display ="block"
+      const forms = document.getElementsByClassName("form")
+     for(const form of forms){
+          form.style.display = "none"
+          document.getElementById("Transaction-history").style.display = "block"
+     }
+})
